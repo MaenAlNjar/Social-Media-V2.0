@@ -2,28 +2,28 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
   username: {
-    type: string,
+    type: String,
     required: true,
     unique: true,
     trim: true,
   },
   email: {
-    type: string,
+    type: String,
     required: true,
     unique: true,
     lowercase: true,
   },
-  Password: {
-    type: string,
+  password: {
+    type: String,
     required: true,
     minlength: 6,
   },
   profilePicture: {
-    type: string,
+    type: String,
     default: "",
   },
   bio: {
-    type: string,
+    type: String,
     default: "am to lazy to type any thing",
   },
   followers: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
