@@ -6,20 +6,18 @@ import { Outlet, useLocation, useNavigate } from "react-router-dom";
 // تأكد أنك تستخدم 'export const' هنا لكل مكون
 export const Layout = () => {
   return (
-    <div className="layout-container">
-      <>
+    <div className="layout">
+      <div className="navbar">
         <Navbar />
-      </>
-      <main className="main-content">
-        <Outlet />
-      </main>
-      <div className="footer">
       </div>
+      <div className="content">
+        <Outlet />
+      </div>
+      <div className="footer"></div>
     </div>
   );
 };
 
-// وتأكد من استخدام 'export const' هنا أيضاً
 export const AuthLayout = () => {
   const location = useLocation();
   const user = JSON.parse(localStorage.getItem("user"));
@@ -32,17 +30,16 @@ export const AuthLayout = () => {
   }, [user, navigate]);
   const hideNavbar = location.pathname.startsWith("/auth/AdminPage");
   return (
-    <div className="auth-layout">
+    <div className="layout">
       {!hideNavbar && (
         <>
           <Navbar />
         </>
       )}
-      <div className="main-content">
+      <div className="content">
         <Outlet />
       </div>
-      <div className="footer">
-      </div>
+      <div className="footer"></div>
     </div>
   );
 };

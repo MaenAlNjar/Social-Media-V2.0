@@ -1,14 +1,95 @@
+/* Navbar Container */
 nav {
-  background-color: #333;
-  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #282c34; 
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 1200px;
+border-radius: 0px 0px 50px 50px;
 }
 
-a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
+/* SocialApp Heading */
+.h2 {
+  font-size: 1.8em;
+  margin: 0;
+  color: #61dafb; 
+  letter-spacing: 1px;
+}
+
+.username {
   font-weight: bold;
+  color: #333;
+}
+
+.logout-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Links Container */
+.div {
+  display: flex;
+  gap: 25px; /* Space between links */
+    align-items: center;
+
+}
+
+/* Individual Links */
+.div a {
+  text-decoration: none; /* Remove underline */
+  color: white;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.div a:hover {
+  color: #61dafb; /* Change color on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid #61dafb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  div {
+    margin-top: 15px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  a {
+    font-size: 1em;
+    padding: 8px 15px; /* Adjust padding for better touch targets */
+    width: 100%; /* Make links take full width */
+    text-align: center;
+    border-radius: 5px; /* Slightly rounded corners for links */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for links */
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }

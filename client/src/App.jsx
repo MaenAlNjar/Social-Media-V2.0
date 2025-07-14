@@ -21,7 +21,6 @@ function App() {
       element: <Layout />,
       children: [{ path: "/", element: <HomePage /> }],
     },
-    // يمكنك إلغاء التعليق عن هذا القسم وإضافة AdminLayout عند الحاجة
     // {
     //   path: "/admin",
     //   element: <AdminLayout />,
