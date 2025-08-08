@@ -3,19 +3,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #282c34; 
+  background-color: #282c34;
   padding: 15px 30px;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  width: 1200px;
-border-radius: 0px 0px 50px 50px;
+  width: 1366x;
+  border-radius: 0px 0px 50px 50px;
 }
 
 /* SocialApp Heading */
 .h2 {
   font-size: 1.8em;
   margin: 0;
-  color: #61dafb; 
+  color: #61dafb;
   letter-spacing: 1px;
 }
 
@@ -33,13 +33,11 @@ border-radius: 0px 0px 50px 50px;
   cursor: pointer;
 }
 
-
 /* Links Container */
 .div {
   display: flex;
   gap: 25px; /* Space between links */
-    align-items: center;
-
+  align-items: center;
 }
 
 /* Individual Links */
@@ -55,7 +53,6 @@ border-radius: 0px 0px 50px 50px;
   color: #61dafb; /* Change color on hover */
   transform: translateY(-2px); /* Slight lift effect on hover */
 }
-
 
 .active-link {
   font-weight: bold;
@@ -86,7 +83,12 @@ border-radius: 0px 0px 50px 50px;
     width: 100%; /* Make links take full width */
     text-align: center;
     border-radius: 5px; /* Slightly rounded corners for links */
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for links */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Subtle background for links */
   }
 
   a:hover {

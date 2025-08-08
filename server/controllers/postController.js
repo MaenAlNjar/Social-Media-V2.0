@@ -56,6 +56,15 @@ export const getPostById = async (req, res) => {
     res.status(500).json({ message: "Error fetching post", error: err.message });
   }
 };
+export const getAllPost = async (req, res) => {
+  try {
+    const posts = await Post.find().populate("userId", "username"); // 👈 هنا السحر
+    res.status(200).json(posts);
+  } catch (error) {
+    res.status(500).json({ message: 'فشل في جلب البوستات', error: error.message });
+  }
+};
+  
 
 export const updatePost = async (req, res) => {
   try {

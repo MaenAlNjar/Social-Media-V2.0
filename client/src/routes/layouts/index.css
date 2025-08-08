@@ -1,47 +1,99 @@
-.layout,
-.auth-layout {
+/* Container layouts */
+.layout, .auth-layout {
   max-width: 1366px;
-  height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(227, 227, 225);
   align-items: center;
 }
 
+/* Navbar wrapper */
+.navbar {
+  flex-shrink: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-/* Content wrapper to push content below the navbar */
+/* Content wrapper */
 .content {
-  height: calc(100vh - 100px);
-  margin: 50px;
   flex: 1;
+  width: 100%;
+  padding: 50px 0;
 }
 
 /* Footer */
 .footer {
-  margin-top: 50px;
+  flex-shrink: 0;
+  width: 100%;
   color: white;
   text-align: center;
-  width: 1500px;
+  padding: 20px 0;
+  margin-top: auto; /* يدفع الفوتر لأسفل الصفحة */
 }
+
+/* Responsive Design */
+@media (max-width: 1366px) {
+  .layout, .auth-layout {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 1024px) {
+  .layout, .auth-layout {
+    padding: 0 15px;
+  }
+  
+  .content {
+    padding: 30px 0;
+  }
+  
   .footer {
-    width: 100%; /* Make it full width */
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px) {
+  .layout, .auth-layout {
+    padding: 0 10px;
+  }
+  
+  .content {
+    padding: 20px 0;
+  }
+  
   .footer {
-    width: 100%;
-    font-size: 14px; 
+    font-size: 14px;
+    padding: 15px 0;
   }
 }
 
 @media (max-width: 480px) {
+  .content {
+    padding: 15px 0;
+  }
+  
   .footer {
     font-size: 12px;
-    padding: 10px; /* Add some spacing */
+    padding: 10px 0;
   }
+}
+
+/* إضافات للتحسين */
+.layout, .auth-layout {
+  position: relative;
+}
+
+/* تحسين للوضع المظلم */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    color: #e2e8f0;
+  }
+}
+
+/* تحسين الأداء */
+.navbar, .content, .footer {
+  contain: layout style;
 }

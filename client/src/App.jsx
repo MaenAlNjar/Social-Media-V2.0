@@ -3,7 +3,9 @@ import "./App.css";
 
 import { Layout, AuthLayout } from "./routes/layouts/layout.jsx";
 
-import HomePage from "./routes/HomePage/index.jsx";
+import Dashboard from "./routes/HomePage/index.jsx";
+import HomePage from './routes/Home/index.jsx';
+
 import Login from "./routes/LoginPage/index.jsx";
 import Register from "./routes/RegisterPage/index.jsx";
 
@@ -12,14 +14,14 @@ function App() {
     {
       element: <AuthLayout />,
       children: [
-        { path: "/HomePage", element: <HomePage /> },
+        { path: "/", element: <HomePage /> },
         { path: "/login", element: <Login /> },
         { path: "/register", element: <Register /> },
       ],
     },
     {
       element: <Layout />,
-      children: [{ path: "/", element: <HomePage /> }],
+      children: [ { path: "/Dashboard", element: <Dashboard /> }],
     },
     // {
     //   path: "/admin",

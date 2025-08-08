@@ -1,0 +1,25 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  height: auto;
+}
+
+
+.posts-wrapper {
+  height: 500px; /* أو أي ارتفاع ثابت تريده */
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* ممكن تحافظ على التنسيقات السابقة للبوستات */
+.PostContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}

@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav>
       <h2 className="h2">SocialApp</h2>
       <div className="div">
-        <Link to="/">Home</Link>
+        <Link to="/Dashboard">Home</Link>
 
         {user ? (
           <>

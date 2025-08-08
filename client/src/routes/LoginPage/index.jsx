@@ -19,7 +19,7 @@ const Login = () => {
     try {
       const res = await apiRequest.post("auth/login", form);
       dispatch(loginSuccess(res.data));
-      navigate("/");
+      navigate("/Dashboard");
     } catch (error) {
       console.error("Login failed:", error.response?.data || error.message);
       console.log(form);
